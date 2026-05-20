@@ -1,6 +1,6 @@
-# Syncfusion React UI Composer
+# Syncfusion React UI Builder
 
-**Syncfusion React UI Composer** is an AI-powered agent skill that transforms your UI requirements into production-ready React components. It leverages Syncfusion's extensive React component library to generate accessible, responsive, and theme-consistent user interfaces.
+**Syncfusion React UI Builder** is an AI-powered agent skill that transforms your UI requirements into production-ready React components. It leverages Syncfusion's extensive React component library to generate accessible, responsive, and theme-consistent user interfaces.
 
 ### Key Features
 
@@ -21,7 +21,7 @@
 
 ## Prerequisites
 
-Before using React UI Composer, ensure your environment meets these requirements:
+Before using React UI Builder, ensure your environment meets these requirements:
 
 | Requirement | Description |
 |-------------|-------------|
@@ -34,25 +34,25 @@ Before using React UI Composer, ensure your environment meets these requirements
 
 ```bash
 # Install for GitHub Copilot
-apm install syncfusion/react-ui-composer -t copilot
+apm install syncfusion/react-ui-builder -t copilot
 
 # Install for Claude Code
-apm install syncfusion/react-ui-composer -t claude
+apm install syncfusion/react-ui-builder -t claude
 
 # Install for Cursor
-apm install syncfusion/react-ui-composer -t cursor
+apm install syncfusion/react-ui-builder -t cursor
 
 # Install for Codex
-apm install syncfusion/react-ui-composer -t codex
+apm install syncfusion/react-ui-builder -t codex
 
 # Install for Windsurf
-apm install syncfusion/react-ui-composer -t windsurf
+apm install syncfusion/react-ui-builder -t windsurf
 
 ```
 
 ## How It Works
 
-The React UI Composer uses an **8-stage AI orchestration workflow** that transforms your requirements into production-ready components.
+The React UI Builder uses an **8-stage AI orchestration workflow** that transforms your requirements into production-ready components.
 
 **Stage 1: Intent Analysis**
 Parse the user's natural language query to identify component types, layout intent, and desired functionality.
@@ -80,7 +80,7 @@ Create new files or patch existing ones following the project's structure and co
 
 ## Usage
 
-Choose the `syncfusion-react-ui-composer` agent in the AI chat panel and Invoke the skill through your AI assistant by describing what you want to build:
+Choose the `syncfusion-react-ui-builder` agent in the AI chat panel and Invoke the skill through your AI assistant by describing what you want to build:
 
 ```
 Design a full-viewport premium SaaS admin dashboard that feels fluid, spacious, and visually rich—avoid boxed or narrow layouts. Use a soft neutral background (#F8FAFC) with layered white surfaces, subtle shadows, soft borders, and light gradients to create depth. Include a floating glass-style header (logo, search, notifications, avatar dropdown) and a stylish collapsible sidebar with tinted background, smooth animations, and highlighted active states. Structure the main area with an asymmetrical, responsive grid layout using generous spacing (24–32px), featuring larger, visually dominant cards (with icons, gradients, trend indicators, and hover lift), charts (line/bar/pie in cards), and an enhanced data grid (sticky header, sorting, filtering, badges, hover states, pagination). Apply a modern design system (Inter font, 4/8px spacing, muted grays, indigo/blue accents, semantic colors) with smooth 150–250ms transitions, micro-interactions, tooltips, and high accessibility (WCAG AA, ≥44px targets).

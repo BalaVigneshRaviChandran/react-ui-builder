@@ -1,4 +1,4 @@
-name: react-ui-composer
+name: react-ui-builder
 version: 1.0.0
 description: Generates production-ready webpages powered by Syncfusion React Components. Orchestrates a structured
   workflow that handles design thinking, component picking, code generation, and validation

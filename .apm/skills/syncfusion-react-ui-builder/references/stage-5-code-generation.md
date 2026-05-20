@@ -47,7 +47,7 @@ Icons: [list unique iconCss values]
 
 ### Step 4: (CRITICAL) Read the Syncfusion themes guide to install the overall single Syncfusion theme package:
 
-1. **Read:** `.codestudio/skills/syncfusion-react-ui-composer/references/syncfusion-themes.md`
+1. **Read:** `.codestudio/skills/syncfusion-react-ui-builder/references/syncfusion-themes.md`
 
 ### Step 5: NOW Generate Code Using Extracted Information
 
@@ -101,7 +101,7 @@ Only after completing Steps 1-4, generate the .tsx file using the exact imports 
 
 - **Component Imports:** Use exact import syntax from component skill's getting-started.md
 - **Style Imports:** Include the Syncfusion single package theme from `references/syncfusion-themes.md`
- **Read:** `.codestudio/skills/syncfusion-react-ui-composer/references/syncfusion-themes.md`
+ **Read:** `.codestudio/skills/syncfusion-react-ui-builder/references/syncfusion-themes.md`
 - **Semantic HTML:** Use proper HTML5 elements (`<form>`, `<label>`, `<button>`, etc.)
 - **Accessibility:** ARIA labels, roles, aria-describedby, aria-invalid where needed
 - **TypeScript:** No `any` types, full type safety

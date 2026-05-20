@@ -1,16 +1,16 @@
 ---
-name: syncfusion-react-ui-composer
+name: syncfusion-react-ui-builder
 description: Generates production-ready webpages powered by Syncfusion React Components. Orchestrates Orchestrates a structured workflow that handles design thinking, component picking, code generation, and validation with built-in WCAG 2.1 AA accessibility and responsive design. Use when the user asks to create web components, build UI pages, design interfaces, or generate frontend code for React applications.
 metadata:
   author: "Syncfusion Inc"
   version: "1.0.0"
 ---
 
-# Syncfusion React UI Composer
+# Syncfusion React UI Builder
 
 ## Overview
 
-The **Syncfusion React UI Composer** skill is a frontend-only React component generator that orchestrates an AI agent through 8 stages to generate production-ready UI components powered by Syncfusion.
+The **Syncfusion React UI Builder** skill is a frontend-only React component generator that orchestrates an AI agent through 8 stages to generate production-ready UI components powered by Syncfusion.
 
 ## What This Skill Does
 

@@ -285,7 +285,7 @@ Receive the component-mapping.json created above with `icon_hint` fields for com
 
 Use absolute path for reliable execution:
 ```bash
-cd <your-project-root>\<skills-dir>\syncfusion-react-ui-composer\scripts
+cd <your-project-root>\<skills-dir>\syncfusion-react-ui-builder\scripts
 node components-search.cjs <your-project-root>\component-mapping.json
 ```
 
@@ -295,19 +295,19 @@ node components-search.cjs <your-project-root>\component-mapping.json
 
 **Real example (with hidden config directory like .codestudio):**
 ```bash
-cd d:\my-project\.codestudio\skills\syncfusion-react-ui-composer\scripts
+cd d:\my-project\.codestudio\skills\syncfusion-react-ui-builder\scripts
 node components-search.cjs d:\my-project\component-mapping.json
 ```
 
 **Real example (with hidden config directory like .agents):**
 ```bash
-cd d:\my-project\.agents\skills\syncfusion-react-ui-composer\scripts
+cd d:\my-project\.agents\skills\syncfusion-react-ui-builder\scripts
 node components-search.cjs d:\my-project\component-mapping.json
 ```
 
 **Real example (with visible skills directory):**
 ```bash
-cd d:\my-project\skills\syncfusion-react-ui-composer\scripts
+cd d:\my-project\skills\syncfusion-react-ui-builder\scripts
 node components-search.cjs d:\my-project\component-mapping.json
 ```
 

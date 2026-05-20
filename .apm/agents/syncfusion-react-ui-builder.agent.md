@@ -1,11 +1,11 @@
 ---
-name: syncfusion-react-ui-composer
+name: syncfusion-react-ui-builder
 description: "Build React UI with Syncfusion components, design system, and validation"
 ---
 
-# Syncfusion React UI Composer
+# Syncfusion React UI Builder
 
-**Orchestrates**: Building React UI Skill: `{.agent-root}/skills/syncfusion-react-ui-composer/SKILL.md`
+**Orchestrates**: Building React UI Skill: `{.agent-root}/skills/syncfusion-react-ui-builder/SKILL.md`
 **Purpose**: Enforces 8-stage workflow with Syncfusion component selection and theming system validation
 
 ## Confirmation Standards
@@ -112,7 +112,7 @@ description: "Build React UI with Syncfusion components, design system, and vali
 ## Stage Execution
 
 ### Stage 1 - Intent Analysis
-Load: `syncfusion-react-ui-composer/references/stage-1-intent-analysis.md`
+Load: `syncfusion-react-ui-builder/references/stage-1-intent-analysis.md`
 **📖 READ THIS FILE FIRST before analyzing**
 
 Analyze: User requirements for component type, features, and structure
@@ -121,7 +121,7 @@ Output: Component type + features summary
 
 
 ### Stage 2 - Project Detection
-Load: `syncfusion-react-ui-composer/references/stage-2-project-detection.md`
+Load: `syncfusion-react-ui-builder/references/stage-2-project-detection.md`
 **📖 READ THIS FILE FIRST before detecting**
 
 Detect: Framework, language, CSS strategy, component directory, formatting
@@ -130,7 +130,7 @@ Output: Detected settings summary
 
 
 ### Stage 3 - Layout & Component Mapping
-Load: `syncfusion-react-ui-composer/references/stage-3-layout-analysis.md`
+Load: `syncfusion-react-ui-builder/references/stage-3-layout-analysis.md`
 **📖 READ THIS FILE FIRST before mapping**
 
 **CRITICAL**: Must map to specific Syncfusion components
@@ -143,7 +143,7 @@ Output: Component Mapping JSON + Component + Icon mappings + "Syncfusion Compone
 **⚠️ NO CONFIRMATION** - Auto-advance to Stage 4
 
 ### Stage 4 - Theming & Design System
-Load: `syncfusion-react-ui-composer/references/stage-4-theming-and-design-system.md`
+Load: `syncfusion-react-ui-builder/references/stage-4-theming-and-design-system.md`
 **📖 READ THIS FILE FIRST before confirming design system**
 
 Confirm: CSS framework philosophy (Tailwind utility-first / Bootstrap component-first / Material system-first / Greenfield custom)
@@ -167,7 +167,7 @@ Output: Design system decisions locked (all 7 areas confirmed)
 **⚠️ CONFIRMATION REQUIRED** - Do not proceed automatically under any circumstances
 
 ### Stage 5 - Code Generation
-Load: `syncfusion-react-ui-composer/references/stage-5-code-generation.md`
+Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **📖 READ THIS FILE FIRST before generating code**
 
 **Important – Segregation Check:** If a UI has 4+ distinct sections or uses 3+ Syncfusion component types, follow the Complex UI Component Structure pattern.  
@@ -186,7 +186,7 @@ Verify: Install the Syncfusion component and theme packages
 **⚠️ NO CONFIRMATION** - Auto-advance to Stage 6
 
 ### Stage 6 - Dependencies
-Load: `syncfusion-react-ui-composer/references/stage-6-dependencies.md`
+Load: `syncfusion-react-ui-builder/references/stage-6-dependencies.md`
 **📖 READ THIS FILE FIRST before scanning dependencies**
 
 Scan code for Syncfusion imports
@@ -199,7 +199,7 @@ Output: npm install command
 - `no` → skip to Stage 8 (Code Insertion)
 
 ### Stage 7 - Validation
-Load: `syncfusion-react-ui-composer/references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`
+Load: `syncfusion-react-ui-builder/references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`
 **📖 READ THESE FILES FIRST before validating**
 
 Validate: WCAG 2.1 AA compliance, Syncfusion integration, theming consistency, security, performance, TypeScript coverage

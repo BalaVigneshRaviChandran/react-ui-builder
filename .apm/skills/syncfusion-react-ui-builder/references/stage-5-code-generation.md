@@ -26,9 +26,17 @@ Icons: [list unique iconCss values]
 
 **For every single component skill identified in Step 1:**
 
-1. **Read:** `.codestudio/skills/<skill-name>/references/getting-started.md`
-   - This is the ONLY authoritative source for imports, and setup
-   - Do NOT generate imports without reading this first
+1. **Read**: {.agent-root}/skills/<skill-name>/references/getting-started.md
+
+- This is the ONLY authoritative source for imports and setup
+- You MUST read the file completely (no skimming)
+- Do NOT generate imports without reading this first
+
+**If not found:**
+
+- Check {.agent-root}/skills/<skill-name>/references/*-getting-started.md
+- Example: {.agent-root}/skills/<skill-name>/references/dropdownbutton-getting-started.md
+- You MUST read the selected file completely
    
 2. **Extract and document:**
    - Package name (e.g., `@syncfusion/ej2-react-grids`)
@@ -42,12 +50,12 @@ Icons: [list unique iconCss values]
 
 ### Step 3: If Complex Features Needed
 
-- Read: `.codestudio/skills/<skill-name>/SKILL.md` for complete API documentation
+- Read: `{.agent-root}/skills/<skill-name>/SKILL.md` for complete API documentation
 - Read feature-specific guides: `<skill-name>/references/filtering.md`, `validation.md`, `styling.md`, etc.
 
 ### Step 4: (CRITICAL) Read the Syncfusion themes guide to install the overall single Syncfusion theme package:
 
-1. **Read:** `.codestudio/skills/syncfusion-react-ui-composer/references/syncfusion-themes.md`
+1. **Read:** `{.agent-root}/skills/syncfusion-react-ui-builder/references/syncfusion-themes.md`
 
 ### Step 5: NOW Generate Code Using Extracted Information
 
@@ -101,7 +109,7 @@ Only after completing Steps 1-4, generate the .tsx file using the exact imports 
 
 - **Component Imports:** Use exact import syntax from component skill's getting-started.md
 - **Style Imports:** Include the Syncfusion single package theme from `references/syncfusion-themes.md`
- **Read:** `.codestudio/skills/syncfusion-react-ui-composer/references/syncfusion-themes.md`
+ **Read:** `{.agent-root}/skills/syncfusion-react-ui-builder/references/syncfusion-themes.md`
 - **Semantic HTML:** Use proper HTML5 elements (`<form>`, `<label>`, `<button>`, etc.)
 - **Accessibility:** ARIA labels, roles, aria-describedby, aria-invalid where needed
 - **TypeScript:** No `any` types, full type safety
@@ -110,6 +118,7 @@ Only after completing Steps 1-4, generate the .tsx file using the exact imports 
 - **Performance:** React.memo if needed, useCallback for handlers
 - **Security:** No dangerouslySetInnerHTML, sanitize inputs, no hardcoded secrets
 - **Comments:** JSDoc on component, explain complex logic
+- **Layout Validation (CRITICAL):** For any multi-section layout (sidebar + content, header + body, grid layouts, etc.): (1) Use flexbox for section coordination, (2) Prevent flexible sections from shrinking below content width, (3) Contain main content within viewport to prevent horizontal scroll, (4) Verify all sections properly aligned across mobile (320px), tablet (768px), and desktop (1024px+) viewports
 
 ### Media (MANDATORY)
 
@@ -250,7 +259,7 @@ import './LoginForm.css';
    - **MUST read getting-started for EVERY component in the Stage 3 list** - no exceptions
 
 2. **For EACH component**, read the component skill:
-   - Location: `.codestudio/skills/<component-skill>/references/getting-started.md`
+   - Location: `{.agent-root}/skills/<component-skill>/references/getting-started.md`
    - Extract: imports, required props, setup code
    - Read: feature-specific guides (filtering, sorting, validation, styling, etc.)
 
@@ -262,14 +271,14 @@ import './LoginForm.css';
 **Example - Reading GridComponent Skill:**
 ```
 Before generating code:
-1. Read: .codestudio/skills/syncfusion-react-grid/references/getting-started.md
+1. Read: {.agent-root}/skills/syncfusion-react-grid/references/getting-started.md
    → Extract: import GridComponent from '@syncfusion/ej2-react-grids'
    → Read: required props, dataSource structure, column definitions
 
-2. Read: .codestudio/skills/syncfusion-react-grid/references/sorting.md
+2. Read: {.agent-root}/skills/syncfusion-react-grid/references/sorting.md
    → Understand: allowSorting prop, sortSettings structure
 
-3. Read: .codestudio/skills/syncfusion-react-grid/references/filtering.md
+3. Read: {.agent-root}/skills/syncfusion-react-grid/references/filtering.md
    → Understand: allowFiltering prop, filterSettings structure
 
 4. NOW generate code with correct imports, props, and API calls

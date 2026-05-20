@@ -236,7 +236,7 @@ Re-ask the stage question or clarify intent.
 
 1. **STOP** - Do NOT guess or fix by assumption
 2. **IDENTIFY** the failing component (e.g., TextAreaComponent, GridComponent)
-3. **READ** `.codestudio/skills/syncfusion-react-{component-type}/SKILL.md` → Getting Started
+3. **READ** `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md` → Getting Started
 4. **RESOLVE** using documented approach from skill file
 5. **REBUILD** and verify
 

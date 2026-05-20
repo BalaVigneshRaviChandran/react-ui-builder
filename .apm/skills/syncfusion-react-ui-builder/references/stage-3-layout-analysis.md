@@ -11,7 +11,7 @@
 1. **Read component type** from Stage 1 intent analysis
 2. **Analyze user query** for specific requirements and context
 3. **Determine optimal layout variant** (no user choice needed)
-4. **Create structured component-mapping.json** with all elements
+4. **Create structured component-mapping.json** with all elements and **run the script** with component-mapping.json
 5. **Output JSON** for Stage 3-4 combined processing
 
 ### Decision Framework
@@ -291,7 +291,7 @@ node components-search.cjs <your-project-root>\component-mapping.json
 
 **Replace placeholders:**
 - `<your-project-root>` = Your project's root directory (e.g., `d:\my-project`)
-- `<skills-dir>` = Skills directory name (configuration-specific, e.g., `.codestudio\skills`, `.agents\skills`, `.github\skills`, or `skills`)
+- `<skills-dir>` = Skills directory name (configuration-specific, e.g., `{.agent-root}\skills`, `.agents\skills`, `.github\skills`, or `skills`)
 
 **Real example (with hidden config directory like .codestudio):**
 ```bash

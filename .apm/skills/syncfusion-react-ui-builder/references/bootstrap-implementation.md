@@ -380,7 +380,21 @@ export function DataGrid() {
 }
 ```
 
+### Dark Mode in Syncfusion
+
+Syncfusion bootstrap5 theme respects bootstrap's dark mode:
+
+```tsx
+// Dark mode works automatically when e-dark-mode class is on <html>
+<div className="e-dark-mode">
+  <GridComponent />  {/* Uses dark theme colors for syncfusion components automatically */}
+</div>
+```
+
+📖 **For detailed Syncfusion theming:** See [Syncfusion Theming Resources](syncfusion-theming.md)
+
 ---
+
 
 ## Stage 7: Validation Checklist
 

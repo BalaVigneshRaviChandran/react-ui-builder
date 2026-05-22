@@ -57,6 +57,8 @@ Icons: [list unique iconCss values]
 
 1. **Read:** `{.agent-root}/skills/syncfusion-react-ui-builder/references/syncfusion-themes.md`
 
+**Important** Use overall single Syncfusion theme package.
+
 ### Step 5: NOW Generate Code Using Extracted Information
 
 Only after completing Steps 1-4, generate the .tsx file using the exact imports extracted from component skills.
@@ -324,6 +326,14 @@ components/
 ---
 
 ## Component Integration & File Mapping
+
+**Important:**
+In a default React project, the App.js or App.tsx file typically includes placeholder template content.
+The following content is only a sample template provided by React and can be safely replaced:
+
+**"Edit src/App.js and save to reload."**
+
+If this default React template (including sample JSX, styles, and layout elements like the logo or header) is present in your application, you should remove it to properly display your custom UI on the page.
 
 **Generated files MUST be wired to display in the app:**
 

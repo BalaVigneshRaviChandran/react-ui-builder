@@ -689,9 +689,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 Syncfusion Tailwind3 theme respects Tailwind's dark mode:
 
 ```tsx
-// Dark mode works automatically when e-dark class is on <html>
-<div className="e-dark">
-  <GridComponent />  {/* Uses dark theme colors automatically */}
+// Dark mode works automatically when e-dark-mode class is on <html>
+<div className="e-dark-mode">
+  <GridComponent />  {/* Uses dark theme colors for syncfusion components automatically */}
 </div>
 ```
 

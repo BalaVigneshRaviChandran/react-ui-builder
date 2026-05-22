@@ -669,6 +669,19 @@ If Syncfusion components don't inherit your tokens perfectly, add custom CSS:
 }
 ```
 
+### Dark Mode in Syncfusion
+
+Syncfusion Tailwind3 theme respects Tailwind's dark mode:
+
+```tsx
+// Dark mode works automatically when e-dark-mode class is on <html>
+<div className="e-dark-mode">
+  <GridComponent />  {/* Uses dark theme colors for syncfusion components automatically */}
+</div>
+```
+
+📖 **For detailed Syncfusion theming:** See [Syncfusion Theming Resources](syncfusion-theming.md)
+
 ---
 
 ## Summary

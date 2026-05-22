@@ -17,8 +17,8 @@ The **Syncfusion React UI Builder** skill is a frontend-only React component gen
 **✅ Generates:**
 - React functional components (`.tsx`/`.jsx`) with hooks
 - CSS stylesheets (CSS Modules, Tailwind classes, inline styles)
-- TypeScript interfaces for props, state, and event handlers
-- Syncfusion component integration with correct imports and props
+- TypeScript interfaces for properties, state, and event handlers
+- Syncfusion component integration with correct imports and properties
 - Client-side form validation logic
 - WCAG 2.1 AA accessibility markup (ARIA attributes, semantic HTML)
 - Responsive CSS with mobile-first breakpoints

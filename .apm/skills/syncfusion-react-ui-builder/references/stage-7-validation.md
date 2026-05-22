@@ -1,4 +1,4 @@
-# Stage 5: Validation
+# Stage 7: Validation
 
 **Purpose:** Validate generated code against web standards. Binary pass/fail result.
 
@@ -62,12 +62,27 @@ Auto-fixes applied:
 Remaining issues: 0
 Result: PASS (after fixes)
 ```
+**If FAIL (with remaining issues):**
+```
+✗ Validation Result: FAIL
 
+Issues found:
+  ✗ Missing aria-live region for form error messages
+  ✗ Custom input styling not applied in React components
+
+Auto-fixes applied:
+  ✓ Added aria-live region to React form component
+  ✓ Applied base styling to input elements
+
+Remaining issues: 0
+Result: PASS (after fixes)
+
+```
 **User Interaction:**
 
 If result is PASS: Proceed to next stage - NO Confirmation needed.
 
-If result is FAIL (after fixing):
+If result is FAIL (unresolvable issues):
 ```
 Validation failed with 2 issues (not auto-fixable):
   - Form requires aria-live region for errors

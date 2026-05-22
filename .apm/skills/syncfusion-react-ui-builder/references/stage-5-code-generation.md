@@ -327,14 +327,6 @@ components/
 
 ## Component Integration & File Mapping
 
-**Important:**
-In a default React project, the App.js or App.tsx file typically includes placeholder template content.
-The following content is only a sample template provided by React and can be safely replaced:
-
-**"Edit src/App.js and save to reload."**
-
-If this default React template (including sample JSX, styles, and layout elements like the logo or header) is present in your application, you should remove it to properly display your custom UI on the page.
-
 **Generated files MUST be wired to display in the app:**
 
 1. **Import in App.tsx**:

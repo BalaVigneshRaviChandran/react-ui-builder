@@ -173,8 +173,6 @@ Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **Important – Segregation Check:** If a UI has 4+ distinct sections or uses 3+ Syncfusion component types, follow the Complex UI Component Structure pattern.  
 Split each section into separate components to ensure clarity and modularity—avoid creating a single monolithic component.
 
-**Important:** Remove the default React template content (such as the placeholder markup inside `App.js` / `App.tsx`, including the logo, sample text like "Edit `src/App.js` and save to reload.", and any unused styles) to ensure your custom UI renders correctly.
-
 Generate: [ComponentName].tsx with Syncfusion imports and design tokens
 Generate: [ComponentName].css with responsive design and spacing grid
 Include minimum mock data with useState

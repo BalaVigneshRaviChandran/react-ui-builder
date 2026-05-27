@@ -239,21 +239,50 @@ For dashboards, admin panels, or multi-section layouts:
 ### ⚠️ MANDATORY: Create component-mapping.json in Project Root
 
 **Step 1: Create `component-mapping.json`** in project root (NOT in scripts folder)
+
+Before running the script, confirm the file exists:
 ```bash
-# File: ./component-mapping.json (at workspace root)
+# macOS/Linux
+ls <project-root>/component-mapping.json
+
+# Windows
+dir <project-root>\component-mapping.json
+```
+If the file is missing, re-run the JSON creation step above before proceeding. **Do not run the script without this file present.**
+
+**Step 2: Verify Node.js is installed**
+```bash
+node --version
+```
+- Required: Node.js 14 or higher (18+ recommended)
+- If missing or outdated: **Hard stop** — tell the user:
+  ```
+  ⚠ Node.js 18+ is required to run the component mapper script.
+  Install from: https://nodejs.org/en/download
+  Re-run Stage 3 after installing.
+  ```
+  Do not proceed or use any manual fallback. The script is required for accurate component mapping.
+
+**Step 3: Run ComponentMapper Script**
+```bash
+cd <project-root>/<skills-dir>/syncfusion-react-ui-builder/scripts
+node components-search.cjs <project-root>/component-mapping.json
 ```
 
-**Step 2: Run ComponentMapper Script** with component-mapping.json input
-```bash
-cd scripts
-node components-search.cjs ../component-mapping.json
-```
-
-**Step 3: Capture Output in Chat Context**
+**Step 4: Capture Output in Chat Context**
 - ✅ Script outputs component + icon mapping JSON
 - ✅ Keep mapping results in conversation context ONLY (no file)
 - ✅ Do NOT save script output to file
 - ✅ Reference mapping in chat for Stages 4-5
+
+**Script Error Recovery:**
+
+| Error | Fix |
+|-------|-----|
+| `ENOENT: component-mapping.json not found` | Verify file exists at project root (Step 1), correct the path, retry |
+| `node: command not found` | Hard stop — Node.js not installed (Step 2) |
+| Empty output `{}` or `[]` | Validate JSON structure — ensure all elements have `type_hint` and `id` in snake_case, recreate file and retry |
+| 0 components mapped | Hard stop — do not advance to Stage 4. Share error output for diagnosis |
 
 ### Workflow Benefits
 | Aspect | Benefit |
@@ -276,26 +305,9 @@ Receive the component-mapping.json created above with `icon_hint` fields for com
 
 **⚠️ MANDATORY STEPS (DO NOT SKIP):**
 
-1. **Create** `component-mapping.json` at project root
-2. **Execute** script using the path patterns below
-3. **Capture** script output in chat context (DO NOT save to file)
-4. **Reference** component mapping in subsequent stages
+Follow the 4-step process above: verify file exists → check Node.js → run script → capture output.
 
-**Execution (REQUIRED):**
-
-Use absolute paths for reliable execution across all platforms:
-
-```bash
-# Pattern (cross-platform)
-cd <project-root>/<skills-dir>/syncfusion-react-ui-builder/scripts
-node components-search.cjs <project-root>/component-mapping.json
-```
-
-**Replace placeholders:**
-- `<project-root>` = Your project's root directory
-- `<skills-dir>` = Skills directory (e.g., `.codestudio/skills`, `.agents/skills`, `.github/skills`, or `skills`)
-
-**Examples by skills directory:**
+**Path examples by skills directory:**
 
 ```bash
 # .codestudio
@@ -314,7 +326,6 @@ node components-search.cjs /my-project/component-mapping.json
 **Path Rules:**
 - ✅ Use forward slashes `/` — works on macOS, Linux, and Windows
 - ✅ Use absolute paths — avoids "file not found" errors
-- ✅ Works with any skills directory structure
 - ❌ Avoid relative paths like `../component-mapping.json`
 
 **Output Destination:**

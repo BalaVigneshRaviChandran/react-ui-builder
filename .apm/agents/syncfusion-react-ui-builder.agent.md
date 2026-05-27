@@ -173,8 +173,6 @@ Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **Important – Segregation Check:** If a UI has 4+ distinct sections or uses 3+ Syncfusion component types, follow the Complex UI Component Structure pattern.  
 Split each section into separate components to ensure clarity and modularity—avoid creating a single monolithic component.
 
-**Important:** Remove the default React template content (such as the placeholder markup inside `App.js` / `App.tsx`, including the logo, sample text like "Edit `src/App.js` and save to reload.", and any unused styles) to ensure your custom UI renders correctly.
-
 Generate: [ComponentName].tsx with Syncfusion imports and design tokens
 Generate: [ComponentName].css with responsive design and spacing grid
 Include minimum mock data with useState
@@ -198,7 +196,7 @@ Output: npm install command
 
 **⚠️ CONFIRMATION** - Dependencies installed. Choose next step:
 - `yes` → proceed to Stage 7 (Validation)
-- `no` → skip to Stage 8 (Code Insertion)
+- `no` → ⚠️ Validation skipped. WCAG, accessibility, and security checks will not run. 
 
 ### Stage 7 - Validation
 Load: `syncfusion-react-ui-builder/references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`
@@ -209,6 +207,8 @@ Auto-fix where possible
 Output: PASS ✓ or FAIL ✗
 
 ### Stage 8 - Code Insertion
+Load: `syncfusion-react-ui-builder/references/stage-8-code-insertion.md`
+
 Create component directory structure
 Insert files into project
 Update imports if needed
@@ -275,8 +275,8 @@ Re-ask the stage question or clarify intent.
 
 1. **IDENTIFY** the component from the issue (e.g., DataGrid, TextBox, CheckBox)
 2. **NAVIGATE** to the component skill file:
-   - Path: `.agent-root/skills/syncfusion-react-{component-type}/SKILL.md`
-   - Example: `.agent-root/skills/syncfusion-react-{component-type}/SKILL.md`
+   - Path: `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md`
+   - Example: `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md`
 3. **READ** the entire component skill file using `read_file` tool
 4. **DIAGNOSE** against component skill specifications:
    - Required imports
@@ -297,7 +297,7 @@ Re-ask the stage question or clarify intent.
 User: "DataGrid is not rendering"
 
 1. Component identified: DataGrid
-2. Load: .agent-root/skills/syncfusion-angular-grid/SKILL.md
+2. Load: {.agent-root}/skills/syncfusion-react-grid/SKILL.md
 3. Check: imports, CSS, props, data format
 4. Fix: Show correct DataGrid setup with proper imports and data structure
 5. Verify: Confirm issue resolved

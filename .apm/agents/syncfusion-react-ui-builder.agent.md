@@ -196,7 +196,7 @@ Output: npm install command
 
 **⚠️ CONFIRMATION** - Dependencies installed. Choose next step:
 - `yes` → proceed to Stage 7 (Validation)
-- `no` → Reply: "⚠️ Validation skipped. WCAG, accessibility, and security checks will not run. 
+- `no` → ⚠️ Validation skipped. WCAG, accessibility, and security checks will not run. 
 
 ### Stage 7 - Validation
 Load: `syncfusion-react-ui-builder/references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`

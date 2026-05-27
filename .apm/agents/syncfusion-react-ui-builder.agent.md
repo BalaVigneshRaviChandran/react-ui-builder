@@ -196,7 +196,7 @@ Output: npm install command
 
 **⚠️ CONFIRMATION** - Dependencies installed. Choose next step:
 - `yes` → proceed to Stage 7 (Validation)
-- `no` → skip to Stage 8 (Code Insertion)
+- `no` → Reply: "⚠️ Validation skipped. WCAG, accessibility, and security checks will not run. 
 
 ### Stage 7 - Validation
 Load: `syncfusion-react-ui-builder/references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`
@@ -207,6 +207,8 @@ Auto-fix where possible
 Output: PASS ✓ or FAIL ✗
 
 ### Stage 8 - Code Insertion
+Load: `syncfusion-react-ui-builder/references/stage-8-code-insertion.md`
+
 Create component directory structure
 Insert files into project
 Update imports if needed
@@ -295,7 +297,7 @@ Re-ask the stage question or clarify intent.
 User: "DataGrid is not rendering"
 
 1. Component identified: DataGrid
-2. Load: .agent-root/skills/syncfusion-angular-grid/SKILL.md
+2. Load: .agent-root/skills/syncfusion-react-grid/SKILL.md
 3. Check: imports, CSS, props, data format
 4. Fix: Show correct DataGrid setup with proper imports and data structure
 5. Verify: Confirm issue resolved

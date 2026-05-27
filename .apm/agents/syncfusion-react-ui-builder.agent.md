@@ -275,8 +275,8 @@ Re-ask the stage question or clarify intent.
 
 1. **IDENTIFY** the component from the issue (e.g., DataGrid, TextBox, CheckBox)
 2. **NAVIGATE** to the component skill file:
-   - Path: `.agent-root/skills/syncfusion-react-{component-type}/SKILL.md`
-   - Example: `.agent-root/skills/syncfusion-react-{component-type}/SKILL.md`
+   - Path: `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md`
+   - Example: `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md`
 3. **READ** the entire component skill file using `read_file` tool
 4. **DIAGNOSE** against component skill specifications:
    - Required imports
@@ -297,7 +297,7 @@ Re-ask the stage question or clarify intent.
 User: "DataGrid is not rendering"
 
 1. Component identified: DataGrid
-2. Load: .agent-root/skills/syncfusion-react-grid/SKILL.md
+2. Load: {.agent-root}/skills/syncfusion-react-grid/SKILL.md
 3. Check: imports, CSS, props, data format
 4. Fix: Show correct DataGrid setup with proper imports and data structure
 5. Verify: Confirm issue resolved

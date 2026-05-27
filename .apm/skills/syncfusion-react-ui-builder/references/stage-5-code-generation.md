@@ -357,7 +357,7 @@ components/
 
 ## Syncfusion component and theme Package Installation
 
-**CRITICAL:** After code generation completes, you MUST install all Syncfusion component and theme packages that were used in the generated code. Run the appropriate `npm install` command for each package identified during the component skill reading phase (Stage 4, Steps 1-3).
+**CRITICAL:** After code generation completes, you MUST install all Syncfusion component and theme packages that were used in the generated code. Run the appropriate `npm install` command for each package identified during the component skill reading phase (Stage 5, Steps 1-3).
 
 Example:
 ```bash

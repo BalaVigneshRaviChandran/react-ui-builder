@@ -258,7 +258,6 @@ node --version
 - If missing or outdated: **Hard stop** — tell the user:
   ```
   ⚠ Node.js 18+ is required to run the component mapper script.
-  Install from: https://nodejs.org/en/download
   Re-run Stage 3 after installing.
   ```
   Do not proceed or use any manual fallback. The script is required for accurate component mapping.

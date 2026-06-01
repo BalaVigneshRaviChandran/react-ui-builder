@@ -170,7 +170,25 @@ Output: Design system decisions locked (all 7 areas confirmed)
 Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **📖 READ THIS FILE FIRST before generating code**
 
-**⚠️ MANDATORY: For EACH Syncfusion component in the Component Mapping (Stage 3), read `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md` → Getting Started section IN FULL before generating code. Do NOT skim. This is required.**
+**⚠️ MANDATORY: Read Skill Files Before Generating Code**
+ 
+For EVERY component identified in Stage 3:
+ 
+1. **READ** `{.agent-root}/skills/<skill-name>/references/getting-started.md`
+
+   - ONLY authoritative source for imports and setup — read completely, no skimming
+
+   - If not found: check `{.agent-root}/skills/<skill-name>/references/*-getting-started.md`
+ 
+2. **For complex features** (filtering, sorting, virtualization, validation, custom rendering):
+
+   - **READ** `{.agent-root}/skills/<skill-name>/SKILL.md`
+
+   - **READ** relevant files in `{.agent-root}/skills/<skill-name>/references/`
+ 
+**NEVER** generate imports, props, or feature code from memory — skill files are the source of truth.
+
+🚫 Skipping causes incorrect imports, broken features, and invalid props.
 
 **Important – Segregation Check:** If a UI has 4+ distinct sections or uses 3+ Syncfusion component types, follow the Complex UI Component Structure pattern.  
 Split each section into separate components to ensure clarity and modularity—avoid creating a single monolithic component.
@@ -351,5 +369,4 @@ Get confirmation before code generation
 - Reference stage guides for Syncfusion API details when uncertain
 - **⚠️ MANDATORY: When user reports component rendering/functionality issues, ALWAYS navigate to component skill file first**
 - **⚠️ MANDATORY: Never generate component code from memory if component skill file exists** — verify against skill file for correct imports, props, and types
-- **⚠️ MANDATORY: Before code generation, read each component's Getting Started section IN FULL from `{.agent-root}/skills/syncfusion-react-{component-type}/SKILL.md`. Do not skim.**
 - **⚠️ MANDATORY: Never replace a Syncfusion component with a native HTML element** — fix using the skill file, not by substituting `<input>`, `<select>`, `<table>`, or other HTML elements

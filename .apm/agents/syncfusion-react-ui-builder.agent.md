@@ -171,19 +171,12 @@ Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **📖 READ THIS FILE FIRST before generating code**
 
 **⚠️ MANDATORY: Read Skill Files Before Generating Code**
- 
 For EVERY component identified in Stage 3:
- 
 1. **READ** `{.agent-root}/skills/<skill-name>/references/getting-started.md`
-
    - ONLY authoritative source for imports and setup — read completely, no skimming
-
    - If not found: check `{.agent-root}/skills/<skill-name>/references/*-getting-started.md`
- 
 2. **For complex features** (filtering, sorting, virtualization, validation, custom rendering):
-
    - **READ** `{.agent-root}/skills/<skill-name>/SKILL.md`
-
    - **READ** relevant files in `{.agent-root}/skills/<skill-name>/references/`
  
 **NEVER** generate imports, props, or feature code from memory — skill files are the source of truth.

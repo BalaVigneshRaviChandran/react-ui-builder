@@ -113,8 +113,8 @@ The skill orchestrates **8 stages of pure AI reasoning** with **two user decisio
 **Key Architecture:**
 - **Stateless design**: Conversation history maintains state
 - **Pure AI reasoning**: Each stage reads guidance docs, analyzes context, makes decisions
-- **2 user decision gates**: Stage 4 (theme confirmation) + Stage 6 (dependencies)
-- **6 fully automated stages**: 1, 2, 3, 5, 6, and final code insertion
+- **1 user decision gates**: Stage 4 (theme confirmation)
+- **7 fully automated stages**: 1, 2, 3, 5, 6, 7, and final code insertion
 - **Dedicated theming stage**: Stage 4 locks design system before code generation
 
 ```
@@ -143,10 +143,10 @@ User Request
   For complex UIs (4+ sections or 3+ component types), components MUST be split into modular subcomponents.
   With accessibility + responsive design built-in
     ↓
-[Stage 6: Dependencies] ⭐ USER DECISION #2
+[Stage 6: Dependencies]
   AI detects required packages (Syncfusion + CSS framework)
   Presents npm install command or runs it
-  User confirmation AFTER installation to skip or proceed to next stage
+  Proceed to next stage
     ↓
 [Stage 7: Validation] 
   AI validates WCAG 2.1 AA + security + performance + theming
@@ -179,11 +179,11 @@ User Request
 | 3 | None (AI analyzes) |
 | 4 | Confirm theming decisions (CSS framework, colors, spacing, typography) |
 | 5 | None (AI generates) |
-| 6 | Confirm next step: Proceed to validation (Stage 7) or skip to code insertion (Stage 8) |
+| 6 | None (AI executes) |
 | 7 | None (AI analyzes) |
 | 8 | None (AI executes) |
 
-**Total user decision gates: 2** (Stage 4: theming decision, Stage 6: validation). Rest fully automated with AI reasoning + guidance docs.
+**Total user decision gates: 1** (Stage 4: theming decision). Rest fully automated with AI reasoning + guidance docs.
 
 ## Agent Instructions
 
@@ -223,10 +223,10 @@ User Request
 - Ensure: WCAG 2.1 AA accessibility, responsive design, token architecture applied
 - Output: Generated files ready for review
 
-**Stage 6: Dependencies**  ⭐ USER DECISION #2
+**Stage 6: Dependencies**
 - Read: `references/stage-6-dependencies.md`
 - Task: Detect required packages (Syncfusion + CSS framework), resolve version conflicts
-- Output: Output installation command only; do not assume auto-install unless explicitly requested + User confirmation
+- Output: Output installation command only; do not assume auto-install unless explicitly requested
 
 **Stage 7: Validation**
 - Read: `references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`

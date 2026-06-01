@@ -103,12 +103,11 @@ description: "Build React UI with Syncfusion components, design system, and vali
 1. Execute one stage per turn with explicit stage marker: `[STAGE N]`
 2. Load stage guide only during that stage execution
 3. **Stages 1-3**: Auto-flow (analysis phases, no confirmation needed)
-4. **Stages 4-7**: Gate with user confirmation (decisions + implementation)
+4. **Stages 4-5**: Gate with user confirmation (decisions + implementation)
 5. Require explicit Syncfusion component names based on the layout design before Stage 5
 6. Require theming decisions confirmation before Stage 5 (code generation)
-7. Stage 6 must prompt user to choose between validation or skipping
-8. Prevent stage jumping or shortcuts
-9. **🚫 NEVER replace a Syncfusion component with a native HTML element** — if a component fails, read the skill file and fix it. Never fall back to `<input>`, `<select>`, `<table>`, `<button>`, etc.
+7. Prevent stage jumping or shortcuts
+8. **🚫 NEVER replace a Syncfusion component with a native HTML element** — if a component fails, read the skill file and fix it. Never fall back to `<input>`, `<select>`, `<table>`, `<button>`, etc.
 
 ## Stage Execution
 
@@ -171,6 +170,19 @@ Output: Design system decisions locked (all 7 areas confirmed)
 Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **📖 READ THIS FILE FIRST before generating code**
 
+**⚠️ MANDATORY: Read Skill Files Before Generating Code**
+For EVERY component identified in Stage 3:
+1. **READ** `{.agent-root}/skills/<skill-name>/references/getting-started.md`
+   - ONLY authoritative source for imports and setup — read completely, no skimming
+   - If not found: check `{.agent-root}/skills/<skill-name>/references/*-getting-started.md`
+2. **For complex features** (filtering, sorting, virtualization, validation, custom rendering):
+   - **READ** `{.agent-root}/skills/<skill-name>/SKILL.md`
+   - **READ** relevant files in `{.agent-root}/skills/<skill-name>/references/`
+ 
+**NEVER** generate imports, props, or feature code from memory — skill files are the source of truth.
+
+🚫 Skipping causes incorrect imports, broken features, and invalid props.
+
 **Important – Segregation Check:** If a UI has 4+ distinct sections or uses 3+ Syncfusion component types, follow the Complex UI Component Structure pattern.  
 Split each section into separate components to ensure clarity and modularity—avoid creating a single monolithic component.
 
@@ -195,9 +207,7 @@ List required packages: @syncfusion/ej2-react-grids, @syncfusion/ej2-react-input
 Check package.json for conflicts
 Output: npm install command
 
-**⚠️ CONFIRMATION** - Dependencies installed. Choose next step:
-- `yes` → proceed to Stage 7 (Validation)
-- `no` → ⚠️ Validation skipped. WCAG, accessibility, and security checks will not run. 
+**⚠️ NO CONFIRMATION** - Auto-advance to Stage 7
 
 ### Stage 7 - Validation
 Load: `syncfusion-react-ui-builder/references/stage-7-validation.md` + `assets/validation-rules.md` + `references/web-standards.md`
@@ -338,7 +348,7 @@ User confirms with `yes` to proceed, `no` to review
 **Stages 5-8 (Implementation Gate)**:
 Generate code with confirmed decisions
 Validate and insert into project
-Get confirmation before code generation and validation
+Get confirmation before code generation
 
 ## Key Restrictions
 

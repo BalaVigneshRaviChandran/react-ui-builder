@@ -170,19 +170,6 @@ Output: Design system decisions locked (all 7 areas confirmed)
 Load: `syncfusion-react-ui-builder/references/stage-5-code-generation.md`
 **📖 READ THIS FILE FIRST before generating code**
 
-**⚠️ MANDATORY: Read Skill Files Before Generating Code**
-For EVERY component identified in Stage 3:
-1. **READ** `{.agent-root}/skills/<skill-name>/references/getting-started.md`
-   - ONLY authoritative source for imports and setup — read completely, no skimming
-   - If not found: check `{.agent-root}/skills/<skill-name>/references/*-getting-started.md`
-2. **For complex features** (filtering, sorting, virtualization, validation, custom rendering):
-   - **READ** `{.agent-root}/skills/<skill-name>/SKILL.md`
-   - **READ** relevant files in `{.agent-root}/skills/<skill-name>/references/`
- 
-**NEVER** generate imports, props, or feature code from memory — skill files are the source of truth.
-
-🚫 Skipping causes incorrect imports, broken features, and invalid props.
-
 **Important – Segregation Check:** If a UI has 4+ distinct sections or uses 3+ Syncfusion component types, follow the Complex UI Component Structure pattern.  
 Split each section into separate components to ensure clarity and modularity—avoid creating a single monolithic component.
 
